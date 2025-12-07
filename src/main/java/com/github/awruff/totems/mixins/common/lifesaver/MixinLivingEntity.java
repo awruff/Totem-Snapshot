@@ -8,10 +8,9 @@ import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.living.LivingEntity;
+import net.minecraft.entity.living.effect.StatusEffect;
 import net.minecraft.entity.living.effect.StatusEffectInstance;
-import net.minecraft.entity.living.effect.StatusEffects;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -25,9 +24,6 @@ public abstract class MixinLivingEntity extends Entity {
     }
 
     @Shadow
-    public abstract ItemStack getHandStack(InteractionHand hand);
-
-    @Shadow
     public abstract void setHealth(float amount);
 
     @Shadow
@@ -37,7 +33,10 @@ public abstract class MixinLivingEntity extends Entity {
     public abstract void addStatusEffect(StatusEffectInstance instance);
 
     @Shadow
-    public abstract void setHandStack(InteractionHand hand, ItemStack stack);
+    public abstract ItemStack getStackInHand();
+
+    @Shadow
+    public abstract void setEquipmentStack(int i, ItemStack itemStack);
 
     @Definition(id = "getHealth", method = "Lnet/minecraft/entity/living/LivingEntity;getHealth()F")
     @Expression("this.getHealth() <= 0.0")
@@ -52,26 +51,17 @@ public abstract class MixinLivingEntity extends Entity {
 
         ItemStack item = null;
 
-        for (InteractionHand hand : InteractionHand.values()) {
-            ItemStack heldStack = getHandStack(hand);
-
-            if (heldStack != null && heldStack.getItem() == ModItems.TOTEM) {
-                item = heldStack.copy();
-                heldStack.size -= 1;
-
-                if (heldStack.size <= 0) {
-                    setHandStack(hand, null);
-                }
-
-                break;
-            }
+        ItemStack heldStack = getStackInHand();
+        if (heldStack != null && heldStack.getItem() == ModItems.TOTEM) {
+            item = heldStack.copy();
+            heldStack.size -= 1;
         }
 
         if (item != null) {
             setHealth(1.0F);
             clearStatusEffects();
-            addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 900, 1));
-            addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 100, 1));
+            addStatusEffect(new StatusEffectInstance(StatusEffect.REGENERATION.getId(), 900, 1));
+            addStatusEffect(new StatusEffectInstance(StatusEffect.ABSORPTION.getId(), 100, 1));
 
             world.doEntityEvent((LivingEntity)(Object)this, (byte)35);
         }

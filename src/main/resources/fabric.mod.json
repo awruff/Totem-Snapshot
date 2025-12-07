@@ -12,7 +12,7 @@
   ],
   "depends": {
     "fabricloader": ">=0.17.3",
-    "minecraft": "1.9-alpha.15.33.c",
+    "minecraft": "1.8.9",
     "osl-resource-loader": ">=0.5.4"
   },
   "contact": {

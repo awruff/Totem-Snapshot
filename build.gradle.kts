@@ -7,7 +7,7 @@ group = "com.github.awruff"
 version = "1.0.0"
 
 unimined.minecraft {
-    version("15w33c")
+    version("1.8.9")
 
     mappings {
         calamus()
@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-    fabricApi.osl("15w33c", "0.16.3").forEach {
+    fabricApi.osl("1.8.9", "0.16.3").forEach {
         "modImplementation"(it)
     }
 }
