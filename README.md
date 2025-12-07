@@ -1,14 +1,21 @@
 ## Undying Legacy
 
-Backports the Totem of Undying to 15w33c.
+Faithfully backports the Totem of Undying to Snapshot 15w33c.
 
 ---
 
+### Stats
+- Regeneration I for 45 seconds
+- Absorption I for 5 seconds
+- Prevents all forms of death except falling into the Void
+
 ### Obtainment
+You can craft a Totem of Undying using the recipe below.
+
 ![Crafting.png](assets/Crafting.png)
 
 ### Note
-- There is no sound when a totem is popped.
-- The particles are temporarily replaced with Critical Hits.
+- No sound effect plays when the totem activates.
+- Activation particles are temporarily replaced with Critical Hit particles.
 
 ---
