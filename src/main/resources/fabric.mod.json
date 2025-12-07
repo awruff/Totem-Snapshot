@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "hi",
+  "version": "1.0.0",
+  "authors": [
+    "awruff"
+  ],
+  "environment": "client",
+  "mixins": [
+    "mixins.hi.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.17.3",
+    "minecraft": "1.9-alpha.15.33.c"
+  }
+}

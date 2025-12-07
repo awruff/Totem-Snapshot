@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "com.github.awruff.totems.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinItem",
+    "MixinRenderItem"
+  ]
+}
