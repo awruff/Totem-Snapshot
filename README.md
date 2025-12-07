@@ -1,10 +1,22 @@
-## Totem Snapshot
+## Totems
 
-Brings an experimental version of the totem of undying to 15w33a on Ornithe.
-
-This is for practice so don't expect this to be maintained let alone functional.
+Backports the Totem of Undying to 15w33c Ornithe
 
 ---
 
-#### Texture Info
-- [The texture used is from Minecon 2016](https://minecraft.wiki/w/File:Totem_of_Undying_(pre-release).png)
+### Obtainment
+
+
+### TODO
+- Fix Totems not working in Off-Hand
+- Figure out a better mod name
+- Support more versions
+- Add built-in texture packs (for switching between Jappa & Programmer Art)
+
+---
+
+##### Credits
+Texture Sources
+- Basic Totem: MINECON 2016 Showcase
+- Programmer Art Totem: Minecraft 1.11.2
+- Jappa Totem: Minecraft 1.14.4

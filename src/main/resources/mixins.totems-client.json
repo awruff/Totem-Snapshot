@@ -1,0 +1,12 @@
+{
+  "package": "com.github.awruff.totems.mixins.client",
+  "compatibilityLevel": "JAVA_8",
+  "mixinextras": {
+    "minVersion": "0.5.0"
+  },
+  "client": [
+    "MixinGameGui",
+    "MixinGameRenderer",
+    "MixinNetHandlerPlayClient"
+  ]
+}

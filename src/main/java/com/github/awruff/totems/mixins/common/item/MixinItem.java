@@ -1,4 +1,4 @@
-package com.github.awruff.totems.mixins;
+package com.github.awruff.totems.mixins.common.item;
 
 import com.github.awruff.totems.item.TotemOfUndyingItem;
 import net.minecraft.item.Item;

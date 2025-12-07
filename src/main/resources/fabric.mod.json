@@ -1,13 +1,17 @@
 {
   "schemaVersion": 1,
-  "id": "hi",
+  "id": "totems",
   "version": "1.0.0",
   "authors": [
     "awruff"
   ],
-  "environment": "client",
+  "environment": "*",
   "mixins": [
-    "mixins.hi.json"
+    "mixins.totems.json",
+    {
+      "config": "mixins.totems-client.json",
+      "environment": "client"
+    }
   ],
   "depends": {
     "fabricloader": ">=0.17.3",

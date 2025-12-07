@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.github.awruff"
-version = "1.0-SNAPSHOT"
+version = "1.0.0+15w33c"
 
 unimined.minecraft {
     version("15w33c")
@@ -19,12 +19,11 @@ unimined.minecraft {
     }
 }
 
-repositories {
-    maven("https://maven.quiltmc.org/repository/release/")
-}
-
-dependencies {
-    fabricApi.osl("15w33c", "0.16.3").forEach {
-        "modImplementation"(it)
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
     }
+
+    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_1_8
 }
