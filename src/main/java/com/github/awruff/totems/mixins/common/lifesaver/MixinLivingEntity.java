@@ -55,7 +55,7 @@ public abstract class MixinLivingEntity extends Entity {
         for (InteractionHand hand : InteractionHand.values()) {
             ItemStack heldStack = getHandStack(hand);
 
-            if (heldStack.getItem() == ModItems.TOTEM) {
+            if (heldStack != null && heldStack.getItem() == ModItems.TOTEM) {
                 item = heldStack.copy();
                 heldStack.size -= 1;
 
