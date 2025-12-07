@@ -5,7 +5,9 @@ Backports the Totem of Undying to 15w33c Ornithe
 ---
 
 ### Obtainment
+Subject to change... However, I think this is pretty balanced.
 
+![Crafting.png](assets/Crafting.png)
 
 ### TODO
 - Fix Totems not working in Off-Hand
@@ -16,7 +18,7 @@ Backports the Totem of Undying to 15w33c Ornithe
 ---
 
 ##### Credits
-Texture Sources
-- Basic Totem: MINECON 2016 Showcase
+Texture Sources (Where I got them from)
+- Basic Totem: (Recreated from) MINECON 2016 Showcase Video
 - Programmer Art Totem: Minecraft 1.11.2
 - Jappa Totem: Minecraft 1.14.4
