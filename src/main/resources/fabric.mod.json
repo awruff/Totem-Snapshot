@@ -1,20 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "totems",
+  "id": "undyinglegacy",
   "version": "1.0.0",
-  "authors": [
-    "awruff"
-  ],
   "environment": "*",
   "mixins": [
-    "mixins.totems.json",
+    "undyinglegacy.mixins.json",
     {
-      "config": "mixins.totems-client.json",
+      "config": "undyinglegacy.client.mixins.json",
       "environment": "client"
     }
   ],
   "depends": {
     "fabricloader": ">=0.17.3",
-    "minecraft": "1.9-alpha.15.33.c"
-  }
+    "minecraft": "1.9-alpha.15.33.c",
+    "osl-resource-loader": ">=0.5.4"
+  },
+  "contact": {
+    "homepage": "https://modrinth.com/project/undying-legacy",
+    "issues": "https://github.com/awruff/Undying-Legacy/issues",
+    "sources": "https://github.com/awruff/Undying-Legacy"
+  },
+  "name": "Undying Legacy",
+  "description": "Backports the Totem of Undying to 15w33c.",
+  "icon": "assets/undyinglegacy/icon.png",
+  "authors": [
+    "awruff"
+  ]
 }

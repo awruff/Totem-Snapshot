@@ -8,4 +8,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "Totems"
+rootProject.name = "Undying Legacy"

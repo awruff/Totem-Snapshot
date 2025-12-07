@@ -52,7 +52,7 @@ public class RenderUtils {
         );
 
         float scale = 50.0F + 175.0F * MathHelper.sin(angle);
-        GlStateManager.scalef(scale, -scale, scale);
+        GlStateManager.scalef(-scale, -scale, scale);
 
         GlStateManager.rotatef(900.0F * MathHelper.abs(MathHelper.sin(angle)), 0.0F, 1.0F, 0.0F);
         GlStateManager.rotatef(6.0F * MathHelper.cos(progress * 8.0F), 1.0F, 0.0F, 0.0F);
